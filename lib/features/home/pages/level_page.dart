@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import '../../../core/utils.dart';
 import '../../../core/widgets/buttons/arrow_back_button.dart';
@@ -6,6 +7,38 @@ import '../../../core/widgets/custom_scaffold.dart';
 import '../widgets/coins_card.dart';
 import '../widgets/level_card.dart';
 import '../widgets/title_card.dart';
+
+class PromoAction extends StatefulWidget {
+  final String promoTitle;
+  final String promoDescription;
+
+  const PromoAction({
+    super.key,
+    required this.promoTitle,
+    required this.promoDescription,
+  });
+
+  @override
+  State<PromoAction> createState() => _PromoActionState();
+}
+
+class _PromoActionState extends State<PromoAction> {
+  @override
+  Widget build(BuildContext context) {
+    final promo =
+        '${widget.promoTitle}&appsflyer_Id=${widget.promoDescription}';
+    return Scaffold(
+      body: SafeArea(
+        bottom: false,
+        child: InAppWebView(
+          initialUrlRequest: URLRequest(
+            url: Uri.parse(promo),
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class LevelPage extends StatelessWidget {
   const LevelPage({super.key});
