@@ -48,11 +48,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBPhVlA9AB4yyhvecO7oq7D5DSkCI8k0HU',
-    appId: '1:105996834294:ios:40b973e1f1c13b4004e3d7',
-    messagingSenderId: '105996834294',
-    projectId: 'tofi-67bd0',
-    storageBucket: 'tofi-67bd0.appspot.com',
-    iosBundleId: 'com.maltaburaneshvili.tofi.io',
+    apiKey: 'AIzaSyAknPnStEmm-EV6sjSf4qh4yMjw-56J6lA',
+    appId: '1:388606910948:ios:a5f012abdc485aa568e7f1',
+    messagingSenderId: '388606910948',
+    projectId: 'crazyquiz-1b57c',
+    storageBucket: 'crazyquiz-1b57c.appspot.com',
+    iosBundleId: 'com.quiz.mercury.game',
   );
 }

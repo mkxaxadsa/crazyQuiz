@@ -102,12 +102,11 @@ class _MyAppState extends State<MyApp> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Container(
               color: Colors.white,
-              child: Container(
-                height: 90,
-                width: 90,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(7),
-                    child: Image.asset('assets/1024.png')),
+              width: double.infinity,
+              height: double.infinity,
+              child: Image.asset(
+                'assets/bg.png',
+                fit: BoxFit.cover,
               ),
             );
           } else {

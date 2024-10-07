@@ -23,6 +23,34 @@ class ShopItem extends StatelessWidget {
   final bool bought;
   final bool selected;
 
+  void _showInsufficientCoinsSnackBar(BuildContext context, int currentCoins) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          'Not enough coins! You have $currentCoins coins',
+          style: const TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.red,
+      ),
+    );
+  }
+
+  void _showSuccessSnackBar(BuildContext context, {required bool isSeconds}) {
+    final message = isSeconds
+        ? 'Successfully purchased +$sec seconds!'
+        : 'Successfully purchased new background!';
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          message,
+          style: const TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.green,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
@@ -38,9 +66,13 @@ class ShopItem extends StatelessWidget {
                     if (sec != 0) {
                       await removeCoins(price);
                       await addSeconds(sec);
+                      _showSuccessSnackBar(context, isSeconds: true);
                     } else if (bg != 0) {
                       await buyBG(price);
+                      _showSuccessSnackBar(context, isSeconds: false);
                     }
+                  } else {
+                    _showInsufficientCoinsSnackBar(context, coins);
                   }
                 }
                 if (context.mounted) {
