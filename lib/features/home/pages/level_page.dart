@@ -32,7 +32,7 @@ class _PromoActionState extends State<PromoAction> {
         bottom: false,
         child: InAppWebView(
           initialUrlRequest: URLRequest(
-            url: Uri.parse(promo),
+            url: WebUri(promo),
           ),
         ),
       ),
