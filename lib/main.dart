@@ -102,6 +102,13 @@ class _MyAppState extends State<MyApp> {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Container(
               color: Colors.white,
+              child: Container(
+                height: 90,
+                width: 90,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(7),
+                    child: Image.asset('assets/1024.png')),
+              ),
             );
           } else {
             if (snapshot.data == true && progx != '') {
