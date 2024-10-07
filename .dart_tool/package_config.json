@@ -165,7 +165,7 @@
     },
     {
       "name": "go_router",
-      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/go_router-14.2.8",
+      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/go_router-14.3.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -303,13 +303,13 @@
     },
     {
       "name": "shared_preferences_android",
-      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/shared_preferences_android-2.3.2",
+      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/shared_preferences_android-2.3.3",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.2",
+      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -423,9 +423,9 @@
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4",
+      "rootUri": "file:///Users/kilxsx/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "xml",
@@ -440,7 +440,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-10-07T10:40:38.757124Z",
+  "generated": "2024-10-07T11:24:02.591445Z",
   "generator": "pub",
   "generatorVersion": "3.5.2",
   "flutterRoot": "file:///Users/kilxsx/Documents/dev/flutter",
